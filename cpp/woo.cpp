@@ -7,6 +7,10 @@ using namespace std;
 
 
 int fib(int num){
+  if( num < 1){
+    cout << "you entered [" << num << "]. Please enter a number greater than ]";
+    return -1;
+  }
   int a = 0;
   int b = 1;
   int holder = 0;
@@ -29,9 +33,11 @@ int main()
   //std::cout =  print
   cout << h;
   cout << "Fibonocai Sequence\n";
+  cout << fib(0) << "\n";
   cout << fib(1) << "\n";
   cout << fib(25) << "\n";
-  cout << refib(1) << "\n";
+  cout << refib(0) << "\n";
+  cout << fib(1) << "\n";
   cout << refib(25) << "\n";
   
   return(0);
