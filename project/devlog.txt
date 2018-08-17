@@ -1,0 +1,162 @@
+Chess
+Fabiha Ahmed 
+Kenny Chen
+Jasper Cheung
+pd 5
+---------------------
+Chess
+
+/////////// Zone of Reflection \\\\\\\\\\\
+------------------------------------------
+OBSTACLES OVERCOME
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Used official chess notation to take input and produce output, by using final strings to convert.
+- A bigger and more realistic board in printing.
+- Both ArrayLists and 2-d arrays were used. ArrayLists of 2-d arrays also were used to keep track of moves.
+- Color was determined using a boolean instance variable.
+- Movement was covered with a Movement class that was instantiated in the constructor of pieces.
+- Able to take different inputs for commands using switch command.
+- Avoid cluttered classes using a Utils class containing helper methods.
+- Input was taken using keyboard class used in class.
+- All possible moves were determined using the movement class (except for special moves)
+- To determine if moves were legal we had a series of methods. Legal moves were possible moves and did not put the king in check.
+- There were special cases with 2-square pawn moves, castling, pawn promotion, and en passant. This was covered by a method that would
+add these moves into possible moves if conditions were met, another method to see if it was legal, and another method to do the move.
+- Checkmate was determined if there is no legal moves and the king is in check.
+- Stalemate was determined if there is no legal moves and the king is not in check.
+- ASCII text art!!! Chess!
+
+
+UNRESOLVED ISSUES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- We implemented stalemate but did not implement the other draws, threefold repetition, fifty-move rule, and impossibility of checkmate.
+
+COOL STUFF LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- The continue key word in  a loop starts again at the conditional of the loop without running the rest of the code following continue.
+- The switch statement is like a long chain of if-else statements, but automatically checks equality with .equals().
+- \ is an escape character so you can't output it as a string alone, use \\ to get those slashes in ASCII text art.
+- List is the interface that Arraylist implements, used as variable name when we instantiated ArrayLists in case we had uses for other
+lists or methods. 
+- There were characters that could clear screens or input white boxes in the terminal. We chose not to use them.
+- Class Arrays has methods to print contents of arrays and other methods used to test for our board and arrays of possible moves.
+ 
+
+
+MID-DEVELOPMENT DESIGN CHANGES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- We added new classes (Movement, Utils) we did not originally plan for.
+Movement was a class instantiated in all the pieces to determine how they move/attack, also used to determine if moves were legal.
+Utils was a class that was used as a general class containing helper methods because we felt that our classes were getting cluttered.
+Ex. The aesthetics of the board, checking if the commands were valid, changing user inputs to be used in code. 
+
+- We decided to use official Chess notation instead of just number coordinates because we felt that it would be better for user
+experience.
+
+- Board changed from a barebones that only had letters on the terminal to our current one because it was clearer to see the state of the
+board and the spaces on the board. 
+
+- We implemented stalemate but did not implement the other draws, threefold repetition, fifty-move rule, and impossibility of checkmate.
+Mostly because those required us to keep all states of the board and then compare them.
+
+- We chose not to implement the other variants and instead focus most of our energy on normal chess.
+
+LESSONS LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Commit your changes regularly when editing code in case someone changes
+- git pull --rebase is useful
+- Save your code while editing regularly to make sure you don't lose anything
+- Other people are reading your code; try to make code readable to everyone. (Comments!)
+- Communication is key, avoid arguments and (merge) conflicts but do question and encourage conversation.
+- Doublecheck your work, spell check!
+- Bugtesting is important!
+- Remember that other people are going to be using your code
+
+||||||||||||||||||||||||||||||||||||||||||
+
+
+
+ ______   ______   __   __   __       ______   _______     
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+==============================================================
+
+
+2017-1-08
+--------------------------------------------------------------
+Kenny, Fabiha, Jasper :: Worked on the proposal
+
+2017-1-09
+--------------------------------------------------------------
+Kenny, Fabiha, Jasper :: Revised proposal, UML
+
+2017-1-10
+--------------------------------------------------------------
+Kenny, Fabiha, Jasper :: worked on todo, flowchart
+
+2017-1-11
+--------------------------------------------------------------
+Kenny :: worked on Version 0. Wrote Piece and types of Piece.
+Wrote rudimentary populate board and print board.
+Jasper :: setting up devlog, work on flowchart
+
+2017-1-12
+--------------------------------------------------------------
+Kenny :: Completed Version 0. completed populating board and printing board.
+Jasper :: worked on flowchart, added more comments, format
+Fabiha :: worked on UML diagram
+
+2017-1-13
+--------------------------------------------------------------
+Kenny :: Implemented Version 1.1.
+Added class Movement and movements and attacks for pieces.
+
+2017-1-14
+--------------------------------------------------------------
+Kenny :: Reduced code duplication: Added String name for Piece, augmented Piece constructor.
+
+2017-1-17
+--------------------------------------------------------------
+Jasper :: moved previous README.md to BrainStorm.md.
+Added project description and launch instructions to README.md.
+Kenny :: implemented making a move (Version 1.2)
+Fabiha :: implemented printBoard() in new class ChessBoard
+
+2017-1-18
+--------------------------------------------------------------
+Jasper, Kenny, Fabiha :: Legal movechecking discussion, further
+planning
+Jasper :: Barebones user input
+Kenny :: implement getting possible moves, implement inCheck()
+
+2017-1-19
+--------------------------------------------------------------
+Kenny :: implement isLegalMove(), add checkmating and legalMoves(), fix pawn movement
+(different colors have different movement relative to absolute coordinates), write play and turn,
+added specialMoves and 2-square movement for pawns, added moved instance variable for Piece
+Fabiha :: neater printBoard and put in Utils
+Jasper :: printBoard labels fixes, comments on new stuff
+
+2017-1-20
+--------------------------------------------------------------
+Kenny :: implemented castling
+
+2017-1-21
+--------------------------------------------------------------
+Kenny :: implemented pawn promotion and en passant and stalemate; implemented
+commands pieces and history
+Fabiha :: added history, started Zone of reflection
+Jasper :: Start screen, instructions, help commands, comments
+
+2017-1-22
+--------------------------------------------------------------
+Fabiha, Kenny, Jasper :: Zone of reflection in the devlog
+Kenny :: clean up, refactor code, comments, formatting (untabify)
+Jasper :: Flowchart, bug testing
+
+==============================================================
